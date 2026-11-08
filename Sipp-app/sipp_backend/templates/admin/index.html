@@ -1,0 +1,26 @@
+{% extends 'admin/index.html' %}
+{% load static %}
+
+{% block content %}
+<div style="background: linear-gradient(135deg, #4E0101, #3C5070); color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+    <h2 style="margin: 0;">Panel de Administración SiPP</h2>
+    <p style="margin: 5px 0 0 0; opacity: 0.9;">Sistema Integral de Pedidos para Proyectos</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 25px;">
+    <div style="background: #0b0b0b; padding: 15px; border-radius: 8px; border-left: 4px solid #4E0101; text-align: center;">
+        <h3 style="color: #4E0101; margin: 0;">{% if app_list|length > 0 %}{{ app_list|length }}{% else %}0{% endif %}</h3>
+        <small>Módulos Activos</small>
+    </div>
+    <div style="background: #0b0b0b; padding: 15px; border-radius: 8px; border-left: 4px solid #d2b48c; text-align: center;">
+        <h3 style="color: #d2b48c; margin: 0;">v1.0</h3>
+        <small>Versión del Sistema</small>
+    </div>
+    <div style="background: #0b0b0b; padding: 15px; border-radius: 8px; border-left: 4px solid #3C5070; text-align: center;">
+        <h3 style="color: #3C5070; margin: 0;">SQLite</h3>
+        <small>Base de Datos</small>
+    </div>
+</div>
+
+{{ block.super }}
+{% endblock %}

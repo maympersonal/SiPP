@@ -1,0 +1,25 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+{% block title %}SiPP - Administración{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="{% static 'img/logo.png' %}" alt="SiPP" height="40" style="vertical-align: middle; margin-right: 10px;">
+        Sistema SiPP - UH
+    </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}
+<div style="padding: 10px; background: #4E0101; color: white; text-align: center; font-size: 12px;">
+    Universidad de La Habana • Dirección de Servicios Tecnológicos
+</div>
+{% endblock %}
+
+{% block footer %}
+<div style="text-align: center; padding: 10px; background: #F5F0E9; color: #4E0101; font-size: 11px;">
+    &copy; {% now 'Y' %} Sistema SiPP - Universidad de La Habana | Grupo de Desarrollo DID
+</div>
+{% endblock %}

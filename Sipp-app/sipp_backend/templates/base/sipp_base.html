@@ -1,0 +1,88 @@
+4<!DOCTYPE html>
+<html lang='es'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>{% block title %}SiPP - Sistema Integral de Pedidos{% endblock %}</title>
+    <style>
+        :root {
+            --borgundy: #4E0101;
+            --tan: #d2b48c;
+            --sapphire: #3C5070;
+            --swan-white: #F5F0E9;
+            --shellstone: #D9CBC2;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: var(--swan-white);
+            color: var(--borgundy);
+        }
+        .header {
+            background: linear-gradient(135deg, var(--borgundy), var(--sapphire));
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header img {
+            height: 40px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .footer {
+            background: var(--borgundy);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            border-top: 4px solid var(--tan);
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background: var(--borgundy);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: var(--sapphire);
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class='header'>
+        <img src='/static/img/logo.png' alt='SiPP'>
+        <div>
+            <h2 style='margin: 0;'>Sistema SiPP</h2>
+            <small>Universidad de La Habana • DST</small>
+        </div>
+    </div>
+    
+    <div class='container'>
+        {% block content %}{% endblock %}
+    </div>
+    
+    <div class='footer'>
+        <p>&copy; {% now 'Y' %} Sistema SiPP - Universidad de La Habana</p>
+        <small>Dirección de Servicios Tecnológicos • Grupo de Desarrollo DID</small>
+    </div>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

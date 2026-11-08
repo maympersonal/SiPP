@@ -1,0 +1,24 @@
+{% extends 'rest_framework/base.html' %}
+
+{% block title %}SiPP API v1{% endblock %}
+
+{% block branding %}
+<a class="navbar-brand" href="/">
+    <img src="/static/img/logo.png" alt="SiPP" height="30" style="margin-right: 10px;">
+    SiPP API v1
+</a>
+{% endblock %}
+
+{% block description %}
+<div style="background: #F5F0E9; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #4E0101;">
+    <strong>Endpoints disponibles:</strong>
+    <ul style="margin: 5px 0;">
+        <li><code>/api/v1/users/</code> - Gestión de Usuarios</li>
+        <li><code>/api/v1/projects/</code> - Gestión de Proyectos</li>
+        <li><code>/api/v1/orders/</code> - Pedidos y Reportes</li>
+        <li><code>/api/v1/help-requests/</code> - Solicitudes de Ayuda</li>
+        <li><code>/api/v1/faqs/</code> - Preguntas Frecuentes</li>
+        <li><code>/api/v1/dashboard/</code> - Dashboard Analítico</li>
+    </ul>
+</div>
+{% endblock %}

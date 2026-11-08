@@ -1,0 +1,3 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/sipp_backend/venv/Scripts/python.exe"
+}
